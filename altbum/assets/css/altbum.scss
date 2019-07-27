@@ -1,0 +1,97 @@
+/*
+  Altbum - CSS Album library
+  Author Hernanda Cahyo K (@hernandack)
+  Free and OpenSource
+  https://github.com/hernandack/altbum
+  version: v1.0
+*/
+
+.altbum {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+  object-fit: contain;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  &.altbum-rounded {
+    border-radius: 16px;
+  }
+  &.altbum-circle {
+    border-radius: 50%;
+  }
+  &.altbum-slim {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
+  &.altbum-wide {
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+  }
+  &.altbum-leaf {
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+  }
+  &.altbum-inset {
+    position: relative;
+    border: 20px solid transparent;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    &.altbum-link {
+      display: block;
+      padding: 8px 24px;
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      text-transform: capitalize;
+      &:hover {
+        color: rgb(35,35,35);
+        background-color: white;
+      }
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  & > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: grow 500ms;
+  }
+  & > .altbum-info {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 24px;
+    color: white;
+    background-color: rgba(35,35,35,.7);
+    text-align: center;
+    & > * {
+      flex: 100% auto;
+    }
+    &:hover {
+      opacity: 1;
+      animation: slideDown 500ms;
+    }
+  }
+}
